@@ -35,7 +35,7 @@ Inside your Rust project, add Raylib as a dependency:
 
 ```bash
 [dependencies]
-raylib = "5.0"
+raylib = "^5.5"
 ```
 
 ### 5. Configure VSCode Debugging
