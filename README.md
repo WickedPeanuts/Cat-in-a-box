@@ -8,8 +8,6 @@ Then install **Visual Studio Code** (with WSL integration).
 
 > 💡 Tip: Open your project directly inside WSL (`code .`).
 
----
-
 ### 2. Install Rust on WSL
 
 You'd better check the latest way to install rust, but here is the current way:
@@ -19,8 +17,6 @@ curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
 rustc --version
 ```
-
----
 
 ### 3. Install CMake, Clang, and Dependencies
 
@@ -34,8 +30,6 @@ libgl1-mesa-dev libglu1-mesa-dev libxcursor-dev libxinerama-dev \
 libwayland-dev libxkbcommon-dev libssl-dev musl lldb
 ```
 
----
-
 ### 4. Add Raylib to Your Cargo.toml
 Inside your Rust project, add Raylib as a dependency:
 
@@ -43,8 +37,6 @@ Inside your Rust project, add Raylib as a dependency:
 [dependencies]
 raylib = "5.0"
 ```
-
----
 
 ### 5. Configure VSCode Debugging
 
@@ -70,8 +62,6 @@ Create (or update) your `.vscode/launch.json` file:
 
 > 🧠 **Note:** `"type": "lldb"` requires the **vadimcn.vscode-lldb** plugin.
 
----
-
 ### 6. Install Recommended VSCode Extensions
 
 ```bash
@@ -79,8 +69,6 @@ code --install-extension vadimcn.vscode-lldb
 code --install-extension rust-lang.rust-analyzer
 code --install-extension tamasfe.even-better-toml
 ```
-
----
 
 ## 📦 Building & Shipping
 
@@ -100,8 +88,6 @@ Your final structure should look something like this:
 
 Run your game from the `target/release` folder and enjoy 🐱📦
 
----
-
 ## 🧩 Notes
 
 - This is my **first Rust project**, so expect some… *creative* code choices.
@@ -109,13 +95,9 @@ Run your game from the `target/release` folder and enjoy 🐱📦
 - Don’t treat this repo as a guide to "good Rust practices".  
   It’s more like a *"what happens if I do this?"* kind of playground.
 
----
-
 ## ❤️ Acknowledgments
 
 - [Raylib](https://www.raylib.com/) — for making graphics fun again.
-
----
 
 > *“If it compiles, it ships.”* — Ancient Rust proverb
 
