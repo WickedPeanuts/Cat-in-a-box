@@ -33,7 +33,7 @@ libwayland-dev libxkbcommon-dev libssl-dev musl lldb
 ### 4. Add Raylib to Your Cargo.toml
 Inside your Rust project, add Raylib as a dependency:
 
-```bash
+```toml
 [dependencies]
 raylib = "^5.5"
 ```
@@ -42,7 +42,7 @@ raylib = "^5.5"
 
 Create (or update) your `.vscode/launch.json` file:
 
-```bash
+```json
 {
     "version": "0.2.0",
     "configurations": [
@@ -55,6 +55,28 @@ Create (or update) your `.vscode/launch.json` file:
             "cwd": "${workspaceFolder}",
             "preLaunchTask": "cargo build",
             "environment": []
+        }
+    ]
+}
+```
+
+And a `.vscode/tasks.json` file:
+
+```json
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cargo build",
+            "type": "shell",
+            "command": "cargo build",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$rustc"
+            ]
         }
     ]
 }
