@@ -11,6 +11,9 @@ Then install **Visual Studio Code** (with WSL integration).
 ---
 
 ### 2. Install Rust on WSL
+
+You'd better check the latest way to install rust, but here is the current way:
+
 ```bash
 curl https://sh.rustup.rs -sSf | sh
 source $HOME/.cargo/env
@@ -21,7 +24,7 @@ rustc --version
 
 ### 3. Install CMake, Clang, and Dependencies
 
-You’ll need build tools and libraries for Raylib and Rust FFI:
+You'll need build tools and libraries for Raylib and Rust FFI:
 
 ```bash
 sudo apt update
@@ -71,11 +74,11 @@ Create (or update) your `.vscode/launch.json` file:
 
 ### 6. Install Recommended VSCode Extensions
 
-(((bash
+```bash
 code --install-extension vadimcn.vscode-lldb
 code --install-extension rust-lang.rust-analyzer
 code --install-extension tamasfe.even-better-toml
-)))
+```
 
 ---
 
@@ -110,12 +113,10 @@ Run your game from the `target/release` folder and enjoy 🐱📦
 
 ## ❤️ Acknowledgments
 
-- [Raylib](https://www.raylib.com/) — for making graphics fun again.  
-- The Rust community — for the endless patience with newbies.  
-- Me — for not giving up halfway through compilation errors.
+- [Raylib](https://www.raylib.com/) — for making graphics fun again.
 
 ---
 
 > *“If it compiles, it ships.”* — Ancient Rust proverb
 
-Ps: Written with ChatGPT because I was too lazy to do so
+Post scriptum: This README.md was written with ChatGPT because I was too lazy to do so
